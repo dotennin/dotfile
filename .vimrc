@@ -142,7 +142,7 @@ call neobundle#end()
 " ファイルタイプ別のプラグイン/インデントを有効にする
 filetype plugin indent on
 " NeoBundleCheck を走らせ起動時に未インストールプラグインをインストールする
-"NeoBundleCheck
+NeoBundleCheck
 
 
 
