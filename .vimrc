@@ -40,11 +40,12 @@ set shiftwidth=4
 "-------------プラグイン-------------------------------------------------
 if has('vim_starting')
    " 初回起動時のみruntimepathにneobundleのパスを指定する
-   set runtimepath+=~/.vim/bundle/neobundle.vim/
+   set runtimepath+=~/dotfiles/.vim/bundle/neobundle.vim/
+   "call neobundle#rc(expand('~/dotfiles/.vim/bundle/'))
 endif
 
 " NeoBundleを初期化
-call neobundle#begin(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/dotfiles/.vim/bundle/'))
 "NeoBundleをNeoBundle自体で管理する
 NeoBundleFetch 'Shougo/neobundle.vim'
 
@@ -136,10 +137,10 @@ NeoBundle 'tpope/vim-surround'
 "  括弧自動補完
 NeoBundle 'Townk/vim-autoclose'
 " ----------------------------------------------
-" ファイルタイプ別のプラグイン/インデントを有効にする
-filetype plugin indent on
 
 call neobundle#end()
+" ファイルタイプ別のプラグイン/インデントを有効にする
+filetype plugin indent on
 " NeoBundleCheck を走らせ起動時に未インストールプラグインをインストールする
 "NeoBundleCheck
 
