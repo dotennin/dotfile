@@ -1,0 +1,8 @@
+neobundle.vim
+neocomplete.vim
+nerdtree
+unite.vim
+vim-autoclose
+vim-ref
+vim-surround
+vim-visual-star-search
