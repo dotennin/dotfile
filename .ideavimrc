@@ -35,7 +35,9 @@ vnoremap < <gv
 vnoremap > >gv
 
 
-""インサートモードで bash 風キーマップ
+"" bash 風キーマップ
+nnoremap <C-a> ^
+nnoremap <C-e> $<Right>
 inoremap <C-a> <C-o>^
 inoremap <C-e> <C-o>$<Right>
 inoremap <C-b> <Left>
