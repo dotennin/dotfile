@@ -4,5 +4,5 @@
 if [ -f ~/.bashrc ]; then
         . ~/.bashrc
 fi
-~/bat/LicenseServer_linux_amd64
+nohup ~/bat/LicenseServer_linux_amd64 >> ~/bat/logs
 
