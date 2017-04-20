@@ -1,4 +1,4 @@
-
+set number
 set clipboard=unnamedplus
 "検索をファイルの先頭へ循環しない
 set nowrapscan
