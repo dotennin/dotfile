@@ -72,13 +72,19 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 "open a NERDTree automatically when vim starts up
 "autocmd vimenter * NERDTree
 " --------------------------------------------------
+"Vim unite-outlineでソースコード探索がラクチン
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/unite-outline'
+"アウトラインを右側に出す。
+let g:unite_split_rule = 'botright'
+
 let g:unite_enable_start_insert=1
 let g:unite_source_history_yank_enable =1
 let g:unite_source_file_mru_limit = 200
 nnoremap <silent> ,ub :<C-u>Unite buffer<CR>
 nnoremap <silent> ,uf :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
 nnoremap <silent> ,ur :<C-u>Unite -buffer-name=register register<CR>
+noremap ,uo <ESC>:Unite -vertical -winwidth=40 outline<Return>
 " 大文字小文字を区別しない  
 let g:unite_enable_ignore_case = 1  
 let g:unite_enable_smart_case = 1
@@ -189,6 +195,10 @@ NeoBundle 'tpope/vim-surround'
 " ----------------------------------------------
 "  括弧自動補完
 NeoBundle 'Townk/vim-autoclose'
+" ----------------------------------------------
+"  HTMLの補完
+"div>ul>li*5
+NeoBundle 'mattn/emmet-vim'
 " ----------------------------------------------
 "テンプレートエンジンにSmarty
 NeoBundle 'vim-scripts/smarty-syntax'
