@@ -190,6 +190,33 @@ NeoBundle 'tpope/vim-surround'
 "  括弧自動補完
 NeoBundle 'Townk/vim-autoclose'
 " ----------------------------------------------
+"テンプレートエンジンにSmarty
+NeoBundle 'vim-scripts/smarty-syntax'
+" ----------------------------------------------
+"コメントアウト
+"  <c-/> or <gc>
+NeoBundle 'tomtom/tcomment_vim'
+" ----------------------------------------------
+"複数行になっているものを1行にまとめたり、その逆ができるプラグイン。 
+"    gS to split a one-liner into multiple lines
+"    gJ (with the cursor on the first line of a block) to join a block into a single-line statement.
+NeoBundle 'AndrewRadev/splitjoin.vim'
+" ----------------------------------------------
+"  構文チェック
+NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'Shougo/vimproc'
+NeoBundle 'osyo-manga/shabadou.vim'
+NeoBundle 'jceb/vim-hier'
+NeoBundle 'dannyob/quickfixstatus'
+NeoBundle 'osyo-manga/vim-watchdogs'
+"let g:quickrun_config = { ... }
+"call watchdogs#setup(g:quickrun_config)
+" 書き込み後にシンタックスチェックを行う
+let g:watchdogs_check_BufWritePost_enable = 1
+" こっちは一定時間キー入力がなかった場合にシンタックスチェックを行う
+" バッファに書き込み後、1度だけ行われる
+let g:watchdogs_check_CursorHold_enable = 1
+" ----------------------------------------------
 
 call neobundle#end()
 " ファイルタイプ別のプラグイン/インデントを有効にする
