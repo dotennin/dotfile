@@ -1,0 +1,3 @@
+#! /bin/bash
+
+make -f ~/dotfiles/Makefile create_tags 
