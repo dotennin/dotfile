@@ -1,6 +1,6 @@
 .vim/bundle/*
 !.vim/bundle/neobundle.vim/*
-!.vim/userautoload/tags_files/*
+.vim/userautoload/tags_files/*
 *.swp
 *.swo
 *~
