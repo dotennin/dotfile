@@ -12,4 +12,4 @@ ln -sf ~/dotfiles/bat ~/bat
 git pull && git submodule init && git submodule update && git submodule status
 
 #カスタマイズライブラリの適用
-cp -af ~/dotfiles/.vim/config/* ~/dotfiles/.vim/bundle/ 
+cp -af ~/dotfiles/.vim/userautoload/config/* ~/dotfiles/.vim/bundle/ 

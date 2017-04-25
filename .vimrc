@@ -4,9 +4,9 @@
 " 無名レジスタに入るデータを、*レジスタにも入れる。
 " set clipboard+=unnamed
 set clipboard=unnamedplus
-" 削除キーでyankしない
+"x キー削除でデフォルトレジスタに入れない
 nnoremap x "_x
-"nnoremap d "_d
+vnoremap x "_x
 nnoremap D "_D
 
 "c+a 文頭、c+e文末
@@ -47,6 +47,23 @@ set mouse=a
 "let g:php_sql_query = 1
 "let g:sql_type_default = 'mysql'
 
+" ---------------------------------------------------
+"  tag 定義
+" ファイルタイプ毎 & gitリポジトリ毎にtagsの読み込みpathを変える
+function! ReadTags(type)
+    try
+        execute "set tags=".$HOME."/.vim/userautoload/tags_files/".
+              \ system("cd " . expand('%:p:h') . "; basename `git rev-parse --show-toplevel` | tr -d '\n'").
+              \ "/" . a:type . "_tags"
+    catch
+        execute "set tags=./tags/" . a:type . "_tags;"
+    endtry
+endfunction
+
+augroup TagsAutoCmd
+    autocmd!
+    autocmd BufEnter * :call ReadTags(&filetype)
+augroup END
 "-------------プラグイン-------------------------------------------------
 if has('vim_starting')
    " 初回起動時のみruntimepathにneobundleのパスを指定する
@@ -91,6 +108,12 @@ let g:unite_enable_smart_case = 1
 " ESCキーを2回押すと終了する  
 au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
 au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
+" C-vで:vsplit open
+augroup UniteSettingGroup
+  autocmd!
+  au FileType unite nnoremap <silent> <buffer> <expr> <C-v> unite#do_action('vsplit')
+  au FileType unite inoremap <silent> <buffer> <expr> <C-v> unite#do_action('vsplit')
+augroup END
 " ---------------------------------------------------
 " 自動補完
 NeoBundle 'Shougo/neocomplete.vim'
@@ -226,6 +249,30 @@ let g:watchdogs_check_BufWritePost_enable = 1
 " こっちは一定時間キー入力がなかった場合にシンタックスチェックを行う
 " バッファに書き込み後、1度だけ行われる
 let g:watchdogs_check_CursorHold_enable = 1
+" ----------------------------------------------
+" 複数単語のハイライト表示（vim-quickhl）
+NeoBundle "t9md/vim-quickhl"
+nmap ,h <Plug>(quickhl-manual-this)
+xmap ,h <Plug>(quickhl-manual-this)
+nmap ,H <Plug>(quickhl-manual-reset)
+xmap ,H <Plug>(quickhl-manual-reset)
+" ----------------------------------------------
+" ファイル絞りこみ検索
+NeoBundle 'kien/ctrlp.vim'
+" Change the default mapping and the default command to invoke CtrlP:
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+" When invoked, unless a starting directory is specified, CtrlP will set its local working directory according to this variable:
+let g:ctrlp_working_path_mode = 'ra'
+" dotファイルをひっかけて，バイナリや.gitを避ける
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+" set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
 " ----------------------------------------------
 
 call neobundle#end()
