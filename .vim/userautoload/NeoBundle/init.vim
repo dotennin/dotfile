@@ -19,7 +19,7 @@ call neobundle#begin(expand('~/dotfiles/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " plugin insert
-runtime! userautoload/NeoBundle/plugin.vim
+runtime! .vim/userautoload/NeoBundle/plugin.vim
 
 call neobundle#end()
 " ファイルタイプ別のプラグイン/インデントを有効にする
