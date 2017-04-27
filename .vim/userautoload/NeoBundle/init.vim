@@ -2,7 +2,7 @@ let s:neobundle_path = expand('~/dotfiles/.vim/bundle')
 let s:neobundle_repo_path = s:neobundle_path . '/neobundle.vim'
 
 " neobundleなかったらcloneでもってくる
-if !isdirectory(s:neobundle_path)
+if !isdirectory(s:neobundle_repo_path)
   execute '!git clone https://github.com/Shougo/neobundle.vim' s:neobundle_repo_path
   execute '!~/dotfiles/dotfilesLink.sh'
 endif
