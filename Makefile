@@ -42,6 +42,7 @@ test:
 create_tags: $(seq)
 $(seq):
 	mkdir -p $(tags_save_dir)
+	apt-get -v &> /dev/null && sudo apt-get install exuberant-ctags  || sudo yum install ctags
 	ctags -R \
 		--languages=$(word $@,$(lang)) \
       	--langmap=$(word $@,$(lang)):$(word $@,$(ext)) \
