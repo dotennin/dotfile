@@ -37,12 +37,16 @@ test:
 	@echo $(TARGET_PATH)
 	@echo $(git_toplevel)
 	@echo $(seq)
-.PHONY: create_tags $(seq)
 
-create_tags: $(seq)
+.PHONY: install_ctags $(ctags)
+install_ctags: 
+	./bat/ctag_installer.sh
+
+
+.PHONY: create_tags $(seq)
+create_tags: install_ctags $(seq)
 $(seq):
 	mkdir -p $(tags_save_dir)
-	apt-get -v &> /dev/null && sudo apt-get install exuberant-ctags  || sudo yum install ctags
 	ctags -R \
 		--languages=$(word $@,$(lang)) \
       	--langmap=$(word $@,$(lang)):$(word $@,$(ext)) \
