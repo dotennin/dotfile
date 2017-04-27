@@ -64,8 +64,8 @@ augroup TagsAutoCmd
     autocmd!
     autocmd BufEnter * :call ReadTags(&filetype)
 augroup END
+
 "-------------プラグイン-------------------------------------------------
-runtime! userautoload/init/*.vim
-"2行目を消せばいつでもプラグイン無しで動かせる
-runtime! userautoload/NeoBundle/init.vim
+runtime! .vim/userautoload/init/*.vim
+runtime! .vim/userautoload/NeoBundle/init.vim
 
