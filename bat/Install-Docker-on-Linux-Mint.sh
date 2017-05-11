@@ -17,7 +17,7 @@ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 36A1D7869
 
 # Install docker
 sudo apt-get update
-sudo apt-get install -y docker.io cgroup-lite apparmor
+sudo apt-get install -y docker.io cgroup-lite apparmor docker-compose
 
 #
 # Alternatively, just use the curl-able install.sh script provided at https://get.docker.com
