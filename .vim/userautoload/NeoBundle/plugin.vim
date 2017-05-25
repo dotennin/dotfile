@@ -50,7 +50,6 @@ NeoBundle 'AndrewRadev/splitjoin.vim'
 " ----------------------------------------------
 "  構文チェック
 "NeoBundle 'thinca/vim-quickrun'
-"NeoBundle 'Shougo/vimproc'
 "NeoBundle 'osyo-manga/shabadou.vim'
 "NeoBundle 'jceb/vim-hier'
 "NeoBundle 'dannyob/quickfixstatus'
@@ -62,6 +61,7 @@ NeoBundle "t9md/vim-quickhl"
 source ~/dotfiles/.vim/userautoload/plugins/plugins-vim-quickhl.vim
 " ----------------------------------------------
 " ファイル絞りこみ検索
+NeoBundle 'Shougo/vimproc'
 NeoBundle 'kien/ctrlp.vim'
 source ~/dotfiles/.vim/userautoload/plugins/plugins-ctrlp.vim
 " ----------------------------------------------

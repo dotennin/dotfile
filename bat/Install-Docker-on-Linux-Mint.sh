@@ -25,3 +25,11 @@ sudo apt-get install -y docker.io cgroup-lite apparmor docker-compose
 
 echo Add group docker to current user
 sudo usermod -a -G docker $USER
+
+# Docker Composeをインストール
+sudo curl -L "https://github.com/docker/compose/releases/download/1.12.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+# 1.12.0は記事公開時点での最新バージョン
+
+sudo chmod +x /usr/local/bin/docker-compose
+
+docker-compose --version

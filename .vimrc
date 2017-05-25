@@ -31,6 +31,21 @@ inoremap <C-k> <C-o>D<Right>
 inoremap <C-u> <C-o>d^
 inoremap <C-w> <C-o>db
 
+nnoremap s <Nop>
+nnoremap sj <C-w>j
+nnoremap sk <C-w>k
+nnoremap sl <C-w>l
+nnoremap sh <C-w>h
+nnoremap sJ <C-w>J
+nnoremap sK <C-w>K
+nnoremap sL <C-w>L
+nnoremap sH <C-w>H
+nnoremap st :<C-u>tabnew<CR>
+nnoremap sn gt
+nnoremap sp gT
+nnoremap sq :<C-u>q<CR>
+nnoremap sQ :<C-u>bd<CR>
+
 set ignorecase
 set smartcase
 set incsearch

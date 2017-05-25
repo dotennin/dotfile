@@ -4,6 +4,10 @@ let g:unite_source_file_mru_limit = 200
 nnoremap <silent> ,ub :<C-u>Unite buffer<CR>
 nnoremap <silent> ,uf :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
 nnoremap <silent> ,ur :<C-u>Unite -buffer-name=register register<CR>
+" grep検索
+nnoremap <silent> ,ug  :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
+" カーソル位置の単語をgrep検索
+nnoremap <silent> ,uk :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W>
 " 大文字小文字を区別しない  
 let g:unite_enable_ignore_case = 1  
 let g:unite_enable_smart_case = 1
