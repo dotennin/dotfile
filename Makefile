@@ -40,7 +40,7 @@ test:
 
 .PHONY: install_ctags $(ctags)
 install_ctags: 
-	./bat/ctag_installer.sh
+	~/dotfiles/bat/ctag_installer.sh
 
 
 .PHONY: create_tags $(seq)
