@@ -34,5 +34,3 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 docker-compose --version
 
-# create nginx-net network
-docker network create nginx-net
