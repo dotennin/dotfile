@@ -33,3 +33,6 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.12.0/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 
 docker-compose --version
+
+# create nginx-net network
+docker network create nginx-net
