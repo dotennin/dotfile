@@ -61,7 +61,6 @@ NeoBundle "t9md/vim-quickhl"
 source ~/dotfiles/.vim/userautoload/plugins/plugins-vim-quickhl.vim
 " ----------------------------------------------
 " ファイル絞りこみ検索
-NeoBundle 'Shougo/vimproc'
 NeoBundle 'kien/ctrlp.vim'
 source ~/dotfiles/.vim/userautoload/plugins/plugins-ctrlp.vim
 " ----------------------------------------------
