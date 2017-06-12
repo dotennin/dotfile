@@ -38,8 +38,9 @@ test:
 	@echo $(git_toplevel)
 	@echo $(seq)
 
-.PHONY: install_ctags $(ctags)
-install_ctags: 
+.PHONY: install $(ctags)
+install: 
+	~/dotfiles/dotfilesLink.sh
 	~/dotfiles/bat/ctag_installer.sh
 
 

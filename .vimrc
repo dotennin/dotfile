@@ -1,3 +1,5 @@
+" 文字コードの指定
+scriptencoding utf-8
 " ビジュアルモードで選択したテキストが、クリップボードに入るようにする
 " http://nanasi.jp/articles/howto/editing/clipboard.html
 " set clipboard=autoselect 
