@@ -66,4 +66,3 @@ NeoBundle 'kien/ctrlp.vim'
 source ~/dotfiles/.vim/userautoload/plugins/plugins-ctrlp.vim
 " ----------------------------------------------
 
-
