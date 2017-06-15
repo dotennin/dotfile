@@ -49,12 +49,8 @@ NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'AndrewRadev/splitjoin.vim'
 " ----------------------------------------------
 "  構文チェック
-"NeoBundle 'thinca/vim-quickrun'
-"NeoBundle 'osyo-manga/shabadou.vim'
-"NeoBundle 'jceb/vim-hier'
-"NeoBundle 'dannyob/quickfixstatus'
-"NeoBundle 'osyo-manga/vim-watchdogs'
-"source ~/dotfiles/.vim/userautoload/plugins/plugins-vim-watchdogs.vim
+NeoBundle 'scrooloose/syntastic'
+source ~/dotfiles/.vim/userautoload/plugins/plugins-syntastic.vim
 " ----------------------------------------------
 " 複数単語のハイライト表示（vim-quickhl）
 NeoBundle "t9md/vim-quickhl"
@@ -64,4 +60,6 @@ source ~/dotfiles/.vim/userautoload/plugins/plugins-vim-quickhl.vim
 NeoBundle 'kien/ctrlp.vim'
 source ~/dotfiles/.vim/userautoload/plugins/plugins-ctrlp.vim
 " ----------------------------------------------
-
+"  TS ファイル対応
+NeoBundle 'leafgarland/typescript-vim'
+source ~/dotfiles/.vim/userautoload/plugins/plugins-typescript-vim
