@@ -45,7 +45,7 @@ install:
 
 
 .PHONY: create_tags $(seq)
-create_tags: install_ctags $(seq)
+create_tags: $(seq)
 $(seq):
 	mkdir -p $(tags_save_dir)
 	ctags -R \
