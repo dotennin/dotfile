@@ -14,7 +14,7 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 "   \ }
 NeoBundle 'Shougo/vimproc.vim', {
 \ 'build' : {
-\     'windows' : 'tools\\update-dll-mingw',
+\     'windows' : 'cmd /c "(if exist autoload\vimproc_win32.dll.old del autoload\vimproc_win32.dll.old) && ren autoload\vimproc_win32.dll vimproc_win32.dll.old && mingw32-make -f make_mingw32.mak"',
 \     'cygwin' : 'make -f make_cygwin.mak',
 \     'mac' : 'make',
 \     'linux' : 'make',
