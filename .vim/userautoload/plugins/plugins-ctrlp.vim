@@ -12,11 +12,12 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 "   \ 'file': '\v\.(exe|so|dll)$',
 "   \ 'link': 'some_bad_symbolic_links',
 "   \ }
-execute "NeoBundle 'Shougo/vimproc.vim'," . string({
-    \ 'build' : {
-        \     'windows' : vimproc_updcmd,
-        \     'cygwin' : 'make -f make_cygwin.mak',
-        \     'mac' : 'make -f make_mac.mak',
-        \     'unix' : 'make -f make_unix.mak',
-        \    },
-        \ })
+NeoBundle 'Shougo/vimproc.vim', {
+\ 'build' : {
+\     'windows' : 'vimproc_updcmd',
+\     'cygwin' : 'make -f make_cygwin.mak',
+\     'mac' : 'make',
+\     'linux' : 'make',
+\     'unix' : 'gmake',
+\    },
+\ }
