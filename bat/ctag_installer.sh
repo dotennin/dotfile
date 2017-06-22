@@ -7,7 +7,7 @@ then
 	echo "install ctags on ubuntu"
 	if [ $installed != 0 ] 
 	then
-		sudo apt-get install exuberant-ctags	
+		sudo apt-get install exuberant-ctags gcc	
 	fi
 else
 	# ctags がインストールされなければインストールする 		
@@ -16,6 +16,6 @@ else
 	if [ $installed != 0 ]
 	then
 		"hello now install ctags on yum"
-		sudo yum install ctags
+		sudo yum install ctags gcc
 	fi
 fi
