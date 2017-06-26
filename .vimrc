@@ -44,7 +44,7 @@ nnoremap sL <C-w>L
 nnoremap sH <C-w>H
 nnoremap st :<C-u>tabnew<CR>
 nnoremap sn gt
-nnoremap sp gT
+nnoremap sp :<C-u>vsplit<CR>
 nnoremap sq :<C-u>q<CR>
 nnoremap sQ :<C-u>bd<CR>
 
