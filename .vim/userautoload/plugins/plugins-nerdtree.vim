@@ -4,3 +4,6 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 let NERDTreeShowHidden=1
 "open a NERDTree automatically when vim starts up
 "autocmd vimenter * NERDTree
+
+"filter
+let NERDTreeIgnore=['\.map$', '\~$']
