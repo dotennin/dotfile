@@ -125,3 +125,9 @@ if [ -x /usr/bin/mint-fortune ]; then
 fi
 
 alias fig='docker-compose'
+
+###-tns-completion-start-###
+if [ -f /home/nochi0105/.tnsrc ]; then 
+    source /home/nochi0105/.tnsrc 
+fi
+###-tns-completion-end-###

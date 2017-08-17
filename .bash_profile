@@ -5,8 +5,10 @@
 if [ -f ~/.bashrc ]; then
         . ~/.bashrc
 fi
-#nohup ~/bat/LicenseServer_linux_amd64 >> ~/bat/logs
+
+export ANDROID_HOME=/home/$(whoami)/Android/Sdk
 PATH=$PATH:$HOME/bin
+PATH=${PATH}:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools
 # [bin]ディレクトリがあったら読み込む。
 export PATH
 # ユーザーネーム変数の開放
