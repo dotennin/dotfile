@@ -4,6 +4,7 @@
 ##########################################
 
 # Check that HTTPS transport is available to APT
+CURRENT_USER=$USER
 if [ ! -e /usr/lib/apt/methods/https ]; then
 	sudo apt-get update
 	sudo apt-get install -y apt-transport-https
@@ -29,7 +30,7 @@ if [ $group_exsts != 0 ]
 then
 	groupadd docker
 fi
-sudo usermod -a -G docker $USER
+sudo usermod -a -G docker $CURRENT_USER
 
 # Docker Composeをインストール
 sudo curl -L "https://github.com/docker/compose/releases/download/1.12.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose

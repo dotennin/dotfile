@@ -1,4 +1,5 @@
 # yum の更新
+CURRENT_USER=$USER
 sudo yum update -y
 
 # yum から docker をインストール
@@ -12,7 +13,7 @@ if [ $group_exsts != 0 ]
 then
 	groupadd docker
 fi
-sudo usermod -a -G docker $USER
+sudo usermod -a -G docker $CURRENT_USER
 
 # Docker Composeをインストール
 sudo curl -L "https://github.com/docker/compose/releases/download/1.12.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
