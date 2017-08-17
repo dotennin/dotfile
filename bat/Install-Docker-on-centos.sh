@@ -7,6 +7,11 @@ sudo yum install -y docker
 # docker サービスの起動
 sudo service docker start
 # ec2-user を docker グループに追加する
+cat /etc/group | grep docker > /dev/null; group_exsts=$?
+if [ $group_exsts != 0 ]
+then
+	groupadd docker
+fi
 sudo usermod -a -G docker $USER
 
 # Docker Composeをインストール

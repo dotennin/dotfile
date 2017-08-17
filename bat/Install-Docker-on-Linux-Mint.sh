@@ -24,6 +24,11 @@ sudo apt-get install -y docker.io cgroup-lite apparmor docker-compose
 #
 
 echo Add group docker to current user
+cat /etc/group | grep docker > /dev/null; group_exsts=$?
+if [ $group_exsts != 0 ]
+then
+	groupadd docker
+fi
 sudo usermod -a -G docker $USER
 
 # Docker Composeをインストール
