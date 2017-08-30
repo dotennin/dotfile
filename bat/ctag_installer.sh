@@ -1,5 +1,5 @@
 #! /bin/bash
-apt-get -v > /dev/null && OS="ubuntu" || OS="centos"
+apt-get -v &> /dev/null && OS="ubuntu" || OS="centos"
 if [ $OS = "ubuntu" ]
 then
 	# ctags がインストールされなければインストールする 		
@@ -12,7 +12,7 @@ then
 else
 	# ctags がインストールされなければインストールする 		
 	yum list installed ctags > /dev/null ; installed=$?
-	echo "install ctags on ubuntu"
+	echo "install ctags on centos"
 	if [ $installed != 0 ]
 	then
 		"hello now install ctags on yum"
