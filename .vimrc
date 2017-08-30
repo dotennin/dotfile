@@ -48,6 +48,8 @@ nnoremap sp :<C-u>vsplit<CR>
 nnoremap sq :<C-u>q<CR>
 nnoremap sQ :<C-u>bd<CR>
 
+" スワップファイルを作成しない
+set noswapfile
 set ignorecase
 set smartcase
 set incsearch
