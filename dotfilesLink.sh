@@ -7,7 +7,8 @@ ln -sf ~/dotfiles/.vim ~/.vim
 ln -sf ~/dotfiles/.ideavimrc ~/.ideavimrc
 ln -sf ~/dotfiles/bat ~/bat
 ln -sf ~/dotfiles/bin ~/bin
-#ln -sf ~/dotfiles/.gitignore_global ~/.gitignore_global
+ln -sf ~/dotfiles/.gitignore_global ~/.gitignore_global
+ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
 
 #git サブモジュール導入
 git pull && git submodule init && git submodule update && git submodule status
