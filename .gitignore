@@ -2,6 +2,10 @@
 !.vim/bundle/neobundle.vim/*
 .vim/userautoload/tags_files/*
 .vim/dein/*
+.vim/undo/*
+.vim/.vim
+bin/bin
+bat/bat
 *.swp
 *.swo
 *~

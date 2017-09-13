@@ -1,5 +1,5 @@
 #! /bin/bash
-apt-get -v > /dev/null && OS="ubuntu" || OS="centos"
+apt-get -v &> /dev/null && OS="ubuntu" || OS="centos"
 if [ $OS = "ubuntu" ]
 then
 	# ctags がインストールされなければインストールする 		
@@ -7,15 +7,15 @@ then
 	echo "install ctags on ubuntu"
 	if [ $installed != 0 ] 
 	then
-		sudo apt-get install exuberant-ctags gcc	
+		sudo apt-get -y install exuberant-ctags gcc vim
 	fi
 else
 	# ctags がインストールされなければインストールする 		
 	yum list installed ctags > /dev/null ; installed=$?
-	echo "install ctags on ubuntu"
+	echo "install ctags on centos"
 	if [ $installed != 0 ]
 	then
 		"hello now install ctags on yum"
-		sudo yum install ctags gcc
+		sudo yum install -y ctags gcc vim
 	fi
 fi

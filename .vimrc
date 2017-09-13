@@ -44,18 +44,38 @@ nnoremap sL <C-w>L
 nnoremap sH <C-w>H
 nnoremap st :<C-u>tabnew<CR>
 nnoremap sn gt
-nnoremap sp gT
+nnoremap sp :<C-u>vsplit<CR>
 nnoremap sq :<C-u>q<CR>
 nnoremap sQ :<C-u>bd<CR>
 
+" スワップファイルを作成しない
+set noswapfile
 set ignorecase
 set smartcase
 set incsearch
 set hlsearch
 set number
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
+" マウスモード有効
 set mouse=a
+
+" xtermとscreen対応
+set ttymouse=xterm2
+
+" MacVimやGVimを利用する際にIMEがモードの切替でオフとなる設定
+set imdisable
+" UTF-8文字化け対応
+set termencoding=utf-8
+set encoding=utf-8
+set fileencoding=utf-8
+set fileencodings=utf-8,cp932
+
+" 永続的Undoを有効にします
+if has('persistent_undo')
+  set undodir=~/.vim/undo
+  set undofile 
+endif
 
 " $VIMRUNTIME/syntax/php.vim
 "let g:php_baselib = 1
