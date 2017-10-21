@@ -33,17 +33,10 @@ else
     tags_save_dir = $(HOME)/dotfiles/.vim/userautoload/tags_files/$(shell basename $(git_toplevel))
     tags_target_dir = $(git_toplevel)
 endif
-test:
-	@echo $(TARGET_PATH)
-	@echo $(git_toplevel)
-	@echo $(seq)
-
-.PHONY: install $(ctags)
-install: 
+install:
 	~/dotfiles/dotfilesLink.sh
 	~/dotfiles/bat/ctag_installer.sh
 	~/dotfiles/dotfilesLink.sh
-
 
 .PHONY: create_tags $(seq)
 create_tags: $(seq)

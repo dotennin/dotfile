@@ -4,7 +4,7 @@ scriptencoding utf-8
 " http://nanasi.jp/articles/howto/editing/clipboard.html
 " set clipboard=autoselect 
 " 無名レジスタに入るデータを、*レジスタにも入れる。
-" set clipboard+=unnamed
+set clipboard=unnamed,autoselect
 set clipboard=unnamedplus
 "x キー削除でデフォルトレジスタに入れない
 nnoremap x "_x

@@ -11,6 +11,13 @@ ln -sf ~/dotfiles/.gitignore_global ~/.gitignore_global
 ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
 
 #git サブモジュール導入
+apt-get -v &> /dev/null && OS="ubuntu" || OS="centos"
+if [ $OS = "ubuntu"  ]
+then
+	sudo apt-get -y git
+else
+	sudo yum -y git
+fi
 git pull && git submodule init && git submodule update && git submodule status
 
 #カスタマイズライブラリの適用
