@@ -11,7 +11,7 @@ sudo service docker start
 cat /etc/group | grep docker > /dev/null; group_exsts=$?
 if [ $group_exsts != 0 ]
 then
-	groupadd docker
+  sudo groupadd docker
 fi
 sudo usermod -a -G docker $CURRENT_USER
 
