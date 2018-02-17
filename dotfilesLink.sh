@@ -14,9 +14,9 @@ ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
 apt-get -v &> /dev/null && OS="ubuntu" || OS="centos"
 if [ $OS = "ubuntu"  ]
 then
-	sudo apt-get -y git
+	sudo apt-get -y git gcc
 else
-	sudo yum -y git
+	sudo yum -y git gcc
 fi
 git pull && git submodule init && git submodule update && git submodule status
 
