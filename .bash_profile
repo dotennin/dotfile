@@ -13,3 +13,5 @@ PATH=${PATH}:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools
 export PATH
 # ユーザーネーム変数の開放
 unset USERNAME
+// 日本語文字化け防止
+alias ls='ls --show-control-chars'
