@@ -63,3 +63,6 @@ source ~/dotfiles/.vim/userautoload/plugins/plugins-ctrlp.vim
 "  TS ファイル対応
 NeoBundle 'leafgarland/typescript-vim'
 source ~/dotfiles/.vim/userautoload/plugins/plugins-typescript-vim
+"  .TSX
+NeoBundle 'peitalin/vim-jsx-typescript'
+source ~/dotfiles/.vim/userautoload/plugins/peitalin-vim-jsx-typescript
