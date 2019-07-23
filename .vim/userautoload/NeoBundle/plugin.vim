@@ -65,4 +65,4 @@ NeoBundle 'leafgarland/typescript-vim'
 source ~/dotfiles/.vim/userautoload/plugins/plugins-typescript-vim
 "  .TSX
 NeoBundle 'peitalin/vim-jsx-typescript'
-source ~/dotfiles/.vim/userautoload/plugins/peitalin-vim-jsx-typescript
+source ~/dotfiles/.vim/userautoload/plugins/peitalin-vim-jsx-typescript.vim
