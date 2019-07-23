@@ -4,10 +4,12 @@ scriptencoding utf-8
 syntax on
 " ビジュアルモードで選択したテキストが、クリップボードに入るようにする
 " http://nanasi.jp/articles/howto/editing/clipboard.html
-" set clipboard=autoselect 
-" 無名レジスタに入るデータを、*レジスタにも入れる。
-set clipboard=unnamed,autoselect
-set clipboard=unnamedplus
+" 無名レジスタに入るデータを、*レジスタにも入れる。 [window, linux]
+" set clipboard=unnamed,autoselect
+" set clipboard=unnamedplus
+
+" for mac
+set clipboard=unnamed
 "x キー削除でデフォルトレジスタに入れない
 nnoremap x "_x
 vnoremap x "_x
