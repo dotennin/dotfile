@@ -66,3 +66,7 @@ source ~/dotfiles/.vim/userautoload/plugins/plugins-typescript-vim
 "  .TSX
 NeoBundle 'peitalin/vim-jsx-typescript'
 source ~/dotfiles/.vim/userautoload/plugins/peitalin-vim-jsx-typescript.vim
+" ----------------------------------------------
+"  c++ 補完
+NeoBundle 'vim-jp/cpp-vim'
+source ~/dotfiles/.vim/userautoload/plugins/vim-jp-cpp-vim.vim
