@@ -16,7 +16,13 @@ ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
 apt-get -v &> /dev/null && OS="ubuntu" || OS="centos"
 if [ $OS = "ubuntu"  ]
 then
+	sudo apt update
 	sudo apt-get -y git gcc
+
+	# zsh installation
+	sudo apt-get -y zsh powerline fonts-powerline 
+	# set default shell to zsh
+	chsh -s /bin/zsh
 else
 	sudo yum -y git gcc
 fi
