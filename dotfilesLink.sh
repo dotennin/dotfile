@@ -5,8 +5,6 @@ ln -sf ~/dotfiles/.bashrc ~/.bashrc
 ln -sf ~/dotfiles/.bash_profile ~/.bash_profile
 ln -sf ~/dotfiles/.vim ~/.vim
 ln -sf ~/dotfiles/.ideavimrc ~/.ideavimrc
-ln -sf ~/dotfiles/.zsh ~/.zsh
-ln -sf ~/dotfiles/.zsh_history ~/.zsh_history
 ln -sf ~/dotfiles/.zshrc ~/.zshrc
 
 ln -sf ~/dotfiles/bat ~/bat
