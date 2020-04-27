@@ -1,5 +1,7 @@
 [user]
-	email = wenhua4438@gmail.com
-	name = nochi0105
+	email = wenhua.chen@asurion.com
+	name = Wenhua.Chen
 [core]
 	autoCRLF = false
+[alias]
+	conflicts = !git ls-files -u | cut -f 2 | sort -u
