@@ -1,5 +1,14 @@
 #! /bin/bash
-apt-get -v &> /dev/null && OS="ubuntu" || OS="centos"
+if [ "$(uname)" == 'Darwin' ]; then
+  OS='Mac'
+elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
+  apt-get -v &> /dev/null && OS="ubuntu" || OS="centos"
+elif [ "$(expr substr $(uname -s) 1 10)" == 'MINGW32_NT' ]; then                                                                                           
+  OS='Cygwin'
+else
+  echo "Your platform ($(uname -a)) is not supported."
+  exit 1
+fi
 if [ $OS = "ubuntu"  ]
 then
 	sudo apt update
@@ -17,6 +26,8 @@ then
 	# install thefuck
 	sudo apt install -y python3-dev python3-pip python3-setuptools
 	sudo pip3 install thefuck
+elif [ $OS = "Mac" ]; then
+	brew install gcc
 else
 	sudo yum -y git gcc
 fi

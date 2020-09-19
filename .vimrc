@@ -73,7 +73,8 @@ set imdisable
 set termencoding=utf-8
 set encoding=utf-8
 set fileencoding=utf-8
-set fileencodings=utf-8,cp932
+set fileencodings=utf-8,cp932,sjis
+set fileformats=unix,dos,mac
 
 " 永続的Undoを有効にします
 if has('persistent_undo')
