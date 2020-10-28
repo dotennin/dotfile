@@ -27,7 +27,18 @@ then
 	sudo apt install -y python3-dev python3-pip python3-setuptools
 	sudo pip3 install thefuck
 elif [ $OS = "Mac" ]; then
-	brew install gcc
+	brew install gcc cask
+	brew cask install iterm2
+	brew install zsh
+
+	# set default shell to zsh
+	chsh -s /bin/zsh
+	exec $SHELL -l
+	# install oh-my-zsh
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+	brew install thefuck
+	
 else
 	sudo yum -y git gcc
 fi
