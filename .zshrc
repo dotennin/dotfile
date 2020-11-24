@@ -124,3 +124,6 @@ fi
 
 # strip out problematic Windows %PATH%
 PATH=$(echo "$PATH" | sed -e 's/:\/mnt.*//g')
+
+# Windows Xlaunch port 
+export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0.0

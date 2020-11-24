@@ -111,3 +111,6 @@ fi
 if [ -x /usr/bin/mint-fortune ]; then
      /usr/bin/mint-fortune
 fi
+
+# Windows Xlaunch port 
+export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
