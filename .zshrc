@@ -121,3 +121,6 @@ fi
 if [ -x /usr/bin/mint-fortune ]; then
      /usr/bin/mint-fortune
 fi
+
+# strip out problematic Windows %PATH%
+PATH=$(echo "$PATH" | sed -e 's/:\/mnt.*//g')
