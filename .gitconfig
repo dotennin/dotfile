@@ -1,7 +1,14 @@
 [user]
 	email = wenhua.chen@asurion.com
-	name = Wenhua.Chen
+	name = Dotennin
 [core]
 	autoCRLF = false
 [alias]
 	conflicts = !git ls-files -u | cut -f 2 | sort -u
+[http]
+	sslVerify = false
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
