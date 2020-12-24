@@ -113,4 +113,12 @@ if [ -x /usr/bin/mint-fortune ]; then
 fi
 
 # Windows Xlaunch port 
-export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
+export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0.0
+export GDK_SCALE=1
+export GDK_DPI_SCALE=2
+
+# japanese team env for ubuntu
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+export DefaultIMModule=fcitx
