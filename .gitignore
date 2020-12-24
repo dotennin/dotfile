@@ -6,6 +6,7 @@
 .vim/.vim
 bin/bin
 bat/bat
+.DS_Store
 *.swp
 *.swo
 *~

@@ -1,6 +1,6 @@
 [user]
 	email = wenhua.chen@asurion.com
-	name = Wenhua.Chen
+	name = Dotennin
 [core]
 	autoCRLF = false
 [alias]
@@ -9,3 +9,8 @@
 	sslverify = false
 [credential]
 	helper = store
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
