@@ -37,6 +37,7 @@ install:
 	~/dotfiles/dotfilesLink.sh
 	~/dotfiles/bat/ctag_installer.sh
 	~/dotfiles/dotfilesLink.sh
+	~/dotfiles/wls.sh
 
 .PHONY: create_tags $(seq)
 create_tags: $(seq)

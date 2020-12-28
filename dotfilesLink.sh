@@ -57,6 +57,7 @@ ln -sf ~/dotfiles/.bash_aliases ~/.bash_aliases
 ln -sf ~/dotfiles/.vim ~/.vim
 ln -sf ~/dotfiles/.ideavimrc ~/.ideavimrc
 ln -sf ~/dotfiles/.zshrc ~/.zshrc
+ln -sf ~/dotfiles/.wslconfig ~/.wslconfig
 
 ln -sf ~/dotfiles/bat ~/bat
 ln -sf ~/dotfiles/bin ~/bin
