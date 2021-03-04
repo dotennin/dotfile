@@ -49,7 +49,6 @@ git pull && git submodule init && git submodule update && git submodule status
 
 # move custom library
 cp -af ~/dotfiles/.vim/userautoload/config/* ~/dotfiles/.vim/bundle/ 
-cp ~/dotfiles/.zshrc ~/.zshrc
 
 ln -sf ~/dotfiles/.vimrc ~/.vimrc
 #ln -sf ~/dotfiles/.gvimrc ~/.gvimrc
@@ -58,6 +57,7 @@ ln -sf ~/dotfiles/.bash_profile ~/.bash_profile
 ln -sf ~/dotfiles/.bash_aliases ~/.bash_aliases
 ln -sf ~/dotfiles/.vim ~/.vim
 ln -sf ~/dotfiles/.ideavimrc ~/.ideavimrc
+ln -sf ~/dotfiles/.zshrc ~/.zshrc
 
 ln -sf ~/dotfiles/bat ~/bat
 ln -sf ~/dotfiles/bin ~/bin

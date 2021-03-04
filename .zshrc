@@ -100,5 +100,22 @@ source $ZSH/oh-my-zsh.sh
 
 eval $(thefuck --alias)
 export PATH="/usr/local/opt/bison/bin:$PATH"
-
 export PATH="/usr/local/sbin:$PATH"
+
+# Mac でも Linux でも一発でクリップボードにコピーする zsh の alias
+# cat mail.txt C  # メールの内容をクリップボードにコピーする
+if which pbcopy >/dev/null 2>&1 ; then 
+    # Mac  
+    alias -g C='| pbcopy'
+elif which xsel >/dev/null 2>&1 ; then 
+    # Linux
+    alias -g C='| xsel --input --clipboard'
+elif which putclip >/dev/null 2>&1 ; then 
+    # Cygwin 
+    alias -g C='| putclip'
+fi
+
+# additional OS config
+if [ -f ~/.zshrc_plus ]; then
+    . ~/.zshrc_plus
+fi
