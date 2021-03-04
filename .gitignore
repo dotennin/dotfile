@@ -10,3 +10,4 @@ bat/bat
 *.swp
 *.swo
 *~
+.DS_Store
