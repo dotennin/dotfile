@@ -8,8 +8,15 @@ syntax on
 " set clipboard=unnamed,autoselect
 " set clipboard=unnamedplus
 
-" for mac
-set clipboard=unnamed
+
+if has('macunix')
+	" mac
+	set clipboard=unnamed
+else
+	" linux
+	set clipboard=unnamedplus
+endif
+
 "x キー削除でデフォルトレジスタに入れない
 nnoremap x "_x
 vnoremap x "_x
