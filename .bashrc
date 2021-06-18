@@ -114,3 +114,6 @@ fi
 
 # Windows Xlaunch port 
 export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
+
+# shell-logger
+[ -s "$HOME/bat/shell-logger.sh" ] && source "$HOME/bat/shell-logger.sh"

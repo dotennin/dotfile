@@ -119,3 +119,6 @@ fi
 if [ -f ~/.zshrc_plus ]; then
     . ~/.zshrc_plus
 fi
+
+# shell-logger
+[ -s "$HOME/bat/shell-logger.sh" ] && source "$HOME/bat/shell-logger.sh"
