@@ -28,7 +28,15 @@ elif [ $OS = "Mac" ]; then
 	brew install thefuck
 	
 else
-	sudo yum -y git gcc
+	sudo yum install -y git gcc zsh curl util-linux-user
+	git clone https://github.com/powerline/fonts.git --depth=1
+	cd fonts && ./install.sh
+	sudo mkdir /usr/share/fonts
+	sudo cp /root/.local/share/fonts/* /usr/share/fonts
+	cd ..
+	rm -rf fonts
+  sudo yum install -y python3-dev python3-pip python3-setuptools
+	sudo pip3 install thefuck
 fi
 
 
@@ -39,8 +47,8 @@ chsh -s $(which zsh)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # install the plugins under zsh plugin foloder
-git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
-git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+sudo git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+
 
 
 
