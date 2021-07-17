@@ -11,6 +11,7 @@ else
 fi
 if [ $OS = "ubuntu"  ]
 then
+	ZSH_CUSTOM="/home/$USER/.oh-my-zsh/custom"
 	sudo apt update
 	sudo apt install -y git gcc
 
@@ -21,6 +22,7 @@ then
 	sudo apt install -y python3-dev python3-pip python3-setuptools
 	sudo pip3 install thefuck
 elif [ $OS = "Mac" ]; then
+	ZSH_CUSTOM="/Users/$USER/.oh-my-zsh/custom"
 	brew install gcc cask
 	brew cask install iterm2
 	brew install zsh
@@ -28,6 +30,7 @@ elif [ $OS = "Mac" ]; then
 	brew install thefuck
 	
 else
+	ZSH_CUSTOM="/home/$USER/.oh-my-zsh/custom"
 	sudo yum install -y git gcc zsh curl util-linux-user
 	git clone https://github.com/powerline/fonts.git --depth=1
 	cd fonts && ./install.sh
@@ -47,7 +50,6 @@ chsh -s $(which zsh)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # install the plugins under zsh plugin foloder
-ZSH_CUSTOM="/home/$USER/.oh-my-zsh/custom"
 sudo git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 
 sudo git clone git://github.com/zsh-users/zsh-syntax-highlighting $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
