@@ -122,3 +122,6 @@ fi
 
 # shell-logger
 [ -s "$HOME/bat/shell-logger.sh" ] && source "$HOME/bat/shell-logger.sh"
+
+# allow git work on EFI file system
+export GIT_DISCOVERY_ACROSS_FILESYSTEM=1
